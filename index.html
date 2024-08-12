@@ -20,34 +20,36 @@
 <body>
     <div class="main-container">
         <header class="header">
-            <div class="container flex">
+            <div class="container">
                 <nav class="header-nav">
                     <a class="logo header-logo">
                         Web<span class="logo__style logo__style--header-style">Studio</span>
                     </a>
-                    <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link active-link"
+                    <ul class="header-list">
+                        <li class="header-list__item"><a class="header-list__link  header-list__link--active"
                                 href="./index.html">Студія</a></li>
-                        <li class="header-nav-item"><a class="header-nav__link" href="./portfolio.html">Портфоліо</a>
+                        <li class="header-list__item"><a class="header-nav__link" href="./portfolio.html">Портфоліо</a>
                         </li>
-                        <li class="header-nav-item"><a class="header-nav-ul-li-a" href="./">Контакти</a></li>
+                        <li class="header-list__item"><a class="header-nav__link" href="./">Контакти</a></li>
                     </ul>
                 </nav>
 
                 <ul class="contacts-list">
                     <li class="contacts-list__item">
 
-                        <a class="header-ul-li-a" href="mailto:info@devstudio.com">
-                            <svg class="svg-header" width="16" height="12">
+                        <a class="contacts-list__link" href="mailto:info@devstudio.com">
+                            <svg class="contacts-list__svg" width="16" height="12">
                                 <use href="./Images/symboldefs.svg#email"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
-                    <li class="contacts-item"> <a class="header-ul-li-a" href="tel:+380961111111"><svg width="10"
-                                height="16">
+                    <li class="contacts-list__item">
+                         <a class="contacts-list__link" href="tel:+380961111111">
+                        <svg class="contacts-list__svg" width="10" height="16">
                                 <use href="./Images/symboldefs.svg#smartphone"></use>
-                            </svg> +38 096 111 11 11
-                        </a></li>
+                            </svg>
+                             +38 096 111 11 11</a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -55,9 +57,9 @@
             <section class="main-section">
                 <div class="container flex-column">
                     <!--<h2>замовити наші послуги</h2> -->
-                    <h1 class="main-section-h1">Ефективні рішення для вашого бізнесу</h1>
+                    <h1 class="main-section-title">Ефективні рішення для вашого бізнесу</h1>
 
-                    <button class="button button-order" data-modal-open type="button">
+                    <button class="main-section-button" data-modal-open type="button">
                         Замовити послугу
                     </button>
                 </div>
@@ -65,25 +67,25 @@
             <section class="our-pluses">
                 <div class="container">
                     <!--<h2>Наші плюси</h2> -->
-                    <ul class="our-pluses-ul">
-                        <li class="our-pluses-ul-li">
-                            <h3 class="our-pluses-ul-li-h3">УВАГА ДО ДЕТАЛЕЙ</h3>
-                            <p class="our-pluses-ul-li-p">Ідейні міркування, і навіть початок повсякденної роботи з
+                    <ul class="our-pluses-list">
+                        <li class="our-pluses-list__item">
+                            <h3 class="our-pluses-list__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                            <p class="our-pluses-list__text">Ідейні міркування, і навіть початок повсякденної роботи з
                                 формування позиції.</p>
                         </li>
-                        <li class="our-pluses-ul-li">
-                            <h3 class="our-pluses-ul-li-h3">ПУНКТУАЛЬНІСТЬ</h3>
-                            <p class="our-pluses-ul-li-p">Завдання організації, особливо рамки і місце навчання кадрів
+                        <li class="our-pluses-list__item">
+                            <h3 class="our-pluses-list__title">ПУНКТУАЛЬНІСТЬ</h3>
+                            <p class="our-pluses-list__text">Завдання організації, особливо рамки і місце навчання кадрів
                                 тягне у себе.</p>
                         </li>
-                        <li class="our-pluses-ul-li">
-                            <h3 class="our-pluses-ul-li-h3">ПЛАНУВАННЯ</h3>
-                            <p class="our-pluses-ul-li-p">Так само консультація з широким активом значною мірою
+                        <li class="our-pluses-list__item">
+                            <h3 class="our-pluses-list__title">ПЛАНУВАННЯ</h3>
+                            <p class="our-pluses-list__text">Так само консультація з широким активом значною мірою
                                 зумовлює.</p>
                         </li>
-                        <li class="our-pluses-ul-li">
-                            <h3 class="our-pluses-ul-li-h3">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-                            <p class="our-pluses-ul-li-p">Значимість цих проблем настільки очевидна, що реалізація
+                        <li class="our-pluses-list__item">
+                            <h3 class="our-pluses-list__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                            <p class="our-pluses-list__text">Значимість цих проблем настільки очевидна, що реалізація
                                 планових завдань.</p>
                         </li>
                     </ul>
