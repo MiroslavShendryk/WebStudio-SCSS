@@ -9,12 +9,18 @@
     opacity: 1;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.2);
-  }  
-    .backdrop , .is-hidden, .modal {
-            opacity: 0;
-             transform: translate(-50%, 50%) scale(0.5);
-        
-            
+
+    &.is-hidden .modal {
+        opacity: 0;
+        transform: translate(-50%, 50%) scale(0.5);
+    }
+}
+
+// .backdrop.is-hidden .modal {
+//     opacity: 0;
+//     transform: translate(-50%, 50%) scale(0.5);
+// }
+
 
     .is-hidden {
         opacity: 0;
@@ -36,7 +42,7 @@
             250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
 
-        &__bth {
+        &__btn {
             position: absolute;
             top: 8px;
             right: 8px;
@@ -103,7 +109,7 @@
         }
 
 
-        &__icon {  
+        &__icon {
             position: absolute;
             top: 50%;
             left: 12px;
@@ -114,7 +120,17 @@
         }
 
     }
-}
+
+    
+
+
+
+
+
+
+
+
+
 
 
 
