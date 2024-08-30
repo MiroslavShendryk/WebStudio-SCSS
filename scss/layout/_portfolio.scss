@@ -6,10 +6,8 @@
 
 }
 
-/* .button-item {
-    margin-right: 8px;
-} */
-.portfolio-button {
+
+.button-list__button {
     padding: 6px 25px;
     font-weight: 500;
     font-size: 16px;
@@ -21,11 +19,12 @@
     border-radius: 4px;
 }
 
-.portfolio-button:active {
+.button-list__button:active {
     background-color: var(--buttom-active);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     color: var(--title-work);
 }
+
 
 .portfolio-list {
     display: flex;
@@ -35,7 +34,7 @@
     row-gap: 60px; */
 }
 
-.portfolio-item {
+.portfolio-list__item {
     display: flex;
     flex-direction: column;
     /* width: 370px; */
@@ -46,11 +45,11 @@
 
 }
 
-.portfolio-item:hover {
+.portfolio-list__item:hover {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
-.text-box {
+.portfolio-list__box {
     padding: 20px 24px;
     border-right: 1px solid var(--border-color);
     border-left: 1px solid var(--border-color);
@@ -64,11 +63,17 @@
 
 }
 
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* .portfolio-img {
     margin-bottom: 20px;
 } */
 
-.portfolio-paragraph {
+.portfolio-list__paragraph {
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
@@ -78,7 +83,7 @@
     /* padding-left: 24px; */
 }
 
-.portfolio-text {
+.portfolio-list__text {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
@@ -88,7 +93,7 @@
     /* padding-left: 24px; */
 }
 
-.div-active {
+.portfolio-list__div--active {
     position: absolute;
     top: 0;
     left: 0;
@@ -108,11 +113,11 @@
     color: var(--white-color);
 }
 
-.div-img:hover .div-active {
+.portfolio-list__div:hover .portfolio-list__div--active {
     transform: translatey(0);
 }
 
-.div-img {
+.portfolio-list__div {
     overflow: hidden;
     position: relative;
     width: 370px;
