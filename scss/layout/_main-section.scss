@@ -1,5 +1,5 @@
 .main-section {
-    background-color: var(--main-color);
+    background-color: getColor('main');
     padding-top: 200px;
     padding-bottom: 200px;
     background-image:
@@ -10,6 +10,7 @@
     background-position: center;
     background-size: cover;
 
+
     .container {
         display: flex;
         flex-direction: column;
@@ -17,7 +18,7 @@
 
 
         .main-section-title {
-            color: var(--white-color);
+            color: getColor('white');
             text-align: center;
             font-weight: 900;
             font-size: 44px;
