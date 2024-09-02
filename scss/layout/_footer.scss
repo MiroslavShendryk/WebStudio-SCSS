@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--main-color);
+    background-color: getColor('main');
     padding-bottom: 60px;
     padding-top: 60px;
 
@@ -13,18 +13,18 @@
     }
 
     .logo-footer {
-        font-family: "Raleway", sans-serif;
+        font-family: getFont('second-family');
         font-weight: 700;
         font-size: 26px;
         letter-spacing: 0.03em;
-        color: var(--button-color);
+        color: getColor('button');
         margin-bottom: 20px;
         display: inline-block;
     }
 
 
     .logo__style--footer-style {
-        color: var(--white-color);
+        color: getColor('light');
     }
 
     .footer-address {
@@ -48,7 +48,7 @@
 
 
         &__item--1 {
-            color: var(--white-color);
+            color: getColor('light');
             font-weight: 400;
             line-height: 1.71;
             font-style: normal;
@@ -66,7 +66,7 @@
         }
 
         &__link:hover {
-            color: var(--button-color)
+            color: getColor('button');
         }
     }
 
@@ -76,11 +76,11 @@
         flex-direction: column;
 
         .follow-title {
-            font-family: var(--font-family);
+            font-family: getColor('font-family');
             font-weight: 700;
             font-size: 14px;
             letter-spacing: 0.03em;
-            color: #fff;
+            color: getColor('light');
             margin-bottom: 20px;
             margin-top: 12px;
         }
@@ -102,7 +102,7 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                fill: #FFFFFF;
+                fill: getColor('light');
                 background-color: rgba(255, 255, 255, 0.1);
                 /* анімація */
                 transition-property: background-color;
@@ -112,7 +112,7 @@
             }
 
             &__link:hover {
-                fill: #ffffff;
+                fill: getColor('light');
                 background-color: var(--button-color);
             }
         }
@@ -127,7 +127,7 @@
             font-size: 14px;
             line-height: 1.14;
             letter-spacing: .03em;
-            color: var(--white-color);
+            color: getColor('light');
             margin-bottom: 20px;
             margin-top: 12px;
         }
@@ -142,7 +142,7 @@
                 margin: 0 12px 0 0;
                 padding: 0 16px;
                 height: 50px;
-                color: var(--white-color);
+                color: getColor('light');
                 background: rgba(0, 0, 0, 0);
                 border: 1px solid rgba(255, 255, 255, .3);
                 border-radius: 4px;
@@ -155,7 +155,7 @@
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                fill: var(--white-color);
+                fill: getColor('light');
             }
 
             &__title {

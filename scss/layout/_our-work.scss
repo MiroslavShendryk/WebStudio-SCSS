@@ -5,7 +5,7 @@
 
     .our-work-title {
         text-align: center;
-        color: var(--link-color);
+        color: getColor('link');
         font-size: 36px;
         margin-bottom: 50px;
     }
@@ -37,7 +37,7 @@
             letter-spacing: 0.03em;
             bottom: 0;
             left: 0;
-            color: #FFFFFF;
+            color: getColor('light');
         }
     }
 }

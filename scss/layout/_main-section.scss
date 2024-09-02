@@ -18,7 +18,7 @@
 
 
         .main-section-title {
-            color: getColor('white');
+            color: getColor('light');
             text-align: center;
             font-weight: 900;
             font-size: 44px;
@@ -28,8 +28,8 @@
         }
 
         .main-section-button {
-            color: var(--white-color);
-            background-color: var(--button-color);
+            color: getColor('light');
+            background-color: getColor('button');
             font-size: 16px;
             line-height: 1.87;
             border-radius: 8px;
@@ -43,7 +43,7 @@
             animation-iteration-count: 2;      
         }
         .main-section-button:active{
-            background-color: var(--buttom-active);
+            background-color: getColor('active');
         }
     }
 }

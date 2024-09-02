@@ -3,11 +3,11 @@
 
     .company-title {
         text-align: center;
-        font-family: var(--font-family);
+        font-family: getFont('font-family');
         font-weight: 700;
         font-size: 36px;
         letter-spacing: 0.03em;
-        color: var(--link-color);
+        color: getColor('link');
         margin-bottom: 50px;
     }
 
@@ -39,8 +39,8 @@
         }
 
         &__link:hover {
-            fill: var(--button-color);
-            border-color: var(--button-color);
+            fill: getColor('button');
+            border-color: getColor('button');
         }
     }
 }

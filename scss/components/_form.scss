@@ -35,7 +35,7 @@
     max-width: 528px;
     padding: 40px;
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: getColor('light');
     transform: translate(-50%, -50%);
     transition:
         transform, opacity,
@@ -66,7 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--link-color);
+    color: getColor('link');
     flex-direction: column;
 }
 
@@ -135,12 +135,12 @@
         line-height: 1.17;
         letter-spacing: 0.03em;
         margin: 0 0 30px 0;
-        color: var(--grey-color);
+        color: getColor('text');
     }
 
  
    &__link{
-    color: var(--button-color);
+    color: getColor('button');
    }
 
    &__send{

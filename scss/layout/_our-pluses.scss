@@ -13,7 +13,7 @@
         &__item::before {
             content: "";
             height: 120px;
-            background-color: var(--title-work);
+            background-color: getColor('title');
             display: block;
             margin-bottom: 30px;
             background-repeat: no-repeat;
@@ -45,13 +45,13 @@
 
 
         &__title {
-            color: var(--link-color);
+            color: getColor('link');
             margin-bottom: 10px;
         }
 
 
         &__text {
-            color: var(--grey-color);
+            color: getColor('text');
             font-weight: 400;
             line-height: 1.71;
         }
