@@ -63,11 +63,8 @@
 
 
 .form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include FlCol-centre;
     color: getColor('link');
-    flex-direction: column;
 }
 
 .form-title {
@@ -82,9 +79,8 @@
 .form-div {
     position: relative;
     width: 100%;
-    display: flex;
     text-align: start;
-    flex-direction: column;
+    @include FlCol;
 
 
     &__label {
@@ -128,9 +124,7 @@
     }
 
     &__label--polity {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.03em;
@@ -138,20 +132,20 @@
         color: getColor('text');
     }
 
- 
-   &__link{
-    color: getColor('button');
-   }
 
-   &__send{
-    align-self: center;
-   }
+    &__link {
+        color: getColor('button');
+    }
+
+    &__send {
+        align-self: center;
+    }
 
 
-   &__send:hover,
-   &__send:focus{
-    transform: scale(1.1);
-   }
+    &__send:hover,
+    &__send:focus {
+        transform: scale(1.1);
+    }
 }
 
 

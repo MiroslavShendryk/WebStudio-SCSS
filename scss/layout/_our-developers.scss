@@ -11,7 +11,7 @@
     }
 
     .our-developers-list {
-        display: flex;
+        @include flex;
 
         &__item {
             background-color: getColor('light');
@@ -50,8 +50,7 @@
         }
 
         .our-developers-svg-list {
-            display: flex;
-            justify-content: center;
+          @include flex-center;
             gap: 10px;
 
             &__item {
@@ -60,12 +59,11 @@
 
           
 
+            
             &__link {
                 width: 44px;
                 height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex-center;
                 border-radius: 50%;
                 fill: #AFB1B8;
                 // fill: #FFFFFF;

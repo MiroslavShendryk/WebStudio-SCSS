@@ -12,24 +12,20 @@
     }
 
     .company-list {
-        display: flex;
+        @include flex;
         gap: 30px;
         
 
         &__item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include Flwr-centre;
         }
 
         &__link {
             width: 170px;
             height: 92px;
-            display: flex;
+            @include flex-center;
             border: 1px solid #AFB1B8;
             border-radius: 4px;
-            align-items: center;
-            justify-content: center;
             fill: #AFB1B8;
             /* анімація */
             transition-property: fill, border-color;

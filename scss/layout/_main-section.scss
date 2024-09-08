@@ -12,10 +12,6 @@
 
 
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
 
         .main-section-title {
             color: getColor('light');
@@ -25,6 +21,7 @@
             line-height: 1.36;
             margin-bottom: 30px;
             width: 696px;
+            margin:0 auto ;
         }
 
         .main-section-button {
@@ -40,7 +37,10 @@
             animation-duration: 4s;
             animation-timing-function: linear;
             animation-delay: 0.5s;
-            animation-iteration-count: 2;      
+            animation-iteration-count: 2;  
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px ;    
         }
         .main-section-button:active{
             background-color: getColor('active');
