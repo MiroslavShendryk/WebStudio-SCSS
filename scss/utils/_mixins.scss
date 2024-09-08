@@ -33,3 +33,7 @@
     justify-content: center;
     align-items: center;
 }
+@mixin FlWr {
+    display: flex;
+        flex-wrap: wrap;
+}
