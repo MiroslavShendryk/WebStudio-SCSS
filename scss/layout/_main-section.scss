@@ -1,7 +1,7 @@
 .main-section {
     background-color: getColor('main');
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image:
         linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
@@ -9,61 +9,70 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media screen and (min-width: getBreakPoint('desktop')){
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
 
-
-    .container {
-
-        .main-section-title {
-            color: getColor('light');
-            text-align: center;
-            font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
-            margin-bottom: 30px;
+    .main-section-title {
+        color: getColor('light');
+        text-align: center;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.36;
+        width: 360px;
+        margin: 0 auto;
+        @media screen and (min-width: getBreakPoint('desktop')){
             width: 696px;
-            margin:0 auto ;
-        }
-
-        .main-section-button {
-            color: getColor('light');
-            background-color: getColor('button');
-            font-size: 16px;
-            line-height: 1.87;
-            border-radius: 8px;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-            padding: 10px 32px;
-            border: none;
-            animation-name: grow;
-            animation-duration: 4s;
-            animation-timing-function: linear;
-            animation-delay: 0.5s;
-            animation-iteration-count: 2;  
-            display: block;
-            margin: 0 auto;
-            margin-top: 30px ;    
-        }
-        .main-section-button:active{
-            background-color: getColor('active');
+            font-size: 44px;
         }
     }
+
+
+    .main-section-button {
+        color: getColor('light');
+        background-color: getColor('button');
+        font-size: 16px;
+        line-height: 1.87;
+        border-radius: 8px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        padding: 10px 24px;
+        border: none;
+        animation-name: grow;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-delay: 0.5s;
+        animation-iteration-count: 2;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        @media screen and (min-width: getBreakPoint('desktop')){
+            padding: 10px 32px;
+        }
+
+
+    }
+
+    .main-section-button:active {
+        background-color: getColor('active');
+    }
+    @keyframes grow{
+                 0%{scale:1;}
+                 50%{scale:1.1;}
+                 100%{scale:1;}
+            }
+
 }
-@keyframes grow{
-        0%{scale:1;}
-        50%{scale:1.1;}
-        100%{scale:1;}
-   }
 
 
 
 
-// .flex-column {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
+
+
+
 
 // .main-section {
-//     background-color: var(--main-color);
+//     background-color: getColor('main');
 //     padding-top: 200px;
 //     padding-bottom: 200px;
 //     background-image:
@@ -73,39 +82,103 @@
 //     background-repeat: no-repeat;
 //     background-position: center;
 //     background-size: cover;
-// }
 
-// .main-section-h1 {
-//     color: var(--white-color);
-//     text-align: center;
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 1.36;
-//     margin-bottom: 30px;
-//     width: 696px;
-// }
 
-// .button {
-//     color: var(--white-color);
-//     background-color: var(--button-color);
-//     font-size: 16px;
-//     line-height: 1.87;
-//     border-radius: 8px;
-//     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-//     padding: 10px 32px;
-//     border: none;
-//     animation-name: grow;
-//     animation-duration: 4s;
-//     animation-timing-function: linear;
-//     animation-delay: 0.5s;
-//     animation-iteration-count: 2;
+//     .container {
+
+//         .main-section-title {
+//             color: getColor('light');
+//             text-align: center;
+//             font-weight: 900;
+//             font-size: 44px;
+//             line-height: 1.36;
+//             margin-bottom: 30px;
+//             width: 696px;
+//             margin:0 auto ;
+//         }
+
+//         .main-section-button {
+//             color: getColor('light');
+//             background-color: getColor('button');
+//             font-size: 16px;
+//             line-height: 1.87;
+//             border-radius: 8px;
+//             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+//             padding: 10px 32px;
+//             border: none;
+//             animation-name: grow;
+//             animation-duration: 4s;
+//             animation-timing-function: linear;
+//             animation-delay: 0.5s;
+//             animation-iteration-count: 2;  
+//             display: block;
+//             margin: 0 auto;
+//             margin-top: 30px ;    
+//         }
+//         .main-section-button:active{
+//             background-color: getColor('active');
+//         }
+//     }
 // }
 // @keyframes grow{
-//     0%{scale:1;}
-//     50%{scale:1.1;}
-//     100%{scale:1;}
-// }
+//         0%{scale:1;}
+//         50%{scale:1.1;}
+//         100%{scale:1;}
+//    }
 
-// .button:active {
-//     background-color: var(--buttom-active);
-// }
+
+
+
+// // .flex-column {
+// //     display: flex;
+// //     flex-direction: column;
+// //     align-items: center;
+// // }
+
+// // .main-section {
+// //     background-color: var(--main-color);
+// //     padding-top: 200px;
+// //     padding-bottom: 200px;
+// //     background-image:
+// //         linear-gradient(rgba(47, 48, 58, 0.4),
+// //             rgba(47, 48, 58, 0.4)),
+// //         url(../Images/main-background.jpg);
+// //     background-repeat: no-repeat;
+// //     background-position: center;
+// //     background-size: cover;
+// // }
+
+// // .main-section-h1 {
+// //     color: var(--white-color);
+// //     text-align: center;
+// //     font-weight: 900;
+// //     font-size: 44px;
+// //     line-height: 1.36;
+// //     margin-bottom: 30px;
+// //     width: 696px;
+// // }
+
+// // .button {
+// //     color: var(--white-color);
+// //     background-color: var(--button-color);
+// //     font-size: 16px;
+// //     line-height: 1.87;
+// //     border-radius: 8px;
+// //     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+// //     padding: 10px 32px;
+// //     border: none;
+// //     animation-name: grow;
+// //     animation-duration: 4s;
+// //     animation-timing-function: linear;
+// //     animation-delay: 0.5s;
+// //     animation-iteration-count: 2;
+// // }
+// // @keyframes grow{
+// //     0%{scale:1;}
+// //     50%{scale:1.1;}
+// //     100%{scale:1;}
+// // }
+
+// // .button:active {
+// //     background-color: var(--buttom-active);
+// // }
