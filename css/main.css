@@ -244,16 +244,21 @@ body {
 }
 .our-developers .our-developers-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .our-developers .our-developers-list {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: none;
-    justify-content: none;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-developers .our-developers-list {
+    display: flex;
+    flex-direction: row;
   }
 }
 .our-developers .our-developers-list__item {
@@ -268,6 +273,11 @@ body {
 @media screen and (min-width: 768px) {
   .our-developers .our-developers-list__item {
     width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-developers .our-developers-list__item {
+    width: 270px;
   }
 }
 .our-developers .our-developers-list__img {
