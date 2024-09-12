@@ -243,13 +243,12 @@ body {
   margin-bottom: 30px;
 }
 .our-developers .our-developers-list {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .our-developers .our-developers-list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -328,21 +327,32 @@ body {
 }
 
 .company {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .company {
+    padding: 94px 0;
+  }
 }
 .company .company-title {
   text-align: center;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 50px;
 }
 .company .company-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .company .company-list {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .company .company-list__item {
   display: flex;
@@ -350,7 +360,7 @@ body {
   justify-content: center;
 }
 .company .company-list__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -364,6 +374,16 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+}
+@media screen and (min-width: 768px) {
+  .company .company-list__link {
+    width: 226;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .company .company-list__link {
+    width: 170px;
+  }
 }
 .company .company-list__link:hover {
   fill: #2196F3;

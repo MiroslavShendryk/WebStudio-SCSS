@@ -11,12 +11,11 @@
     }
 
     .our-developers-list {
-        display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
 
         @media screen and (min-width: getBreakPoint('tablet')) {
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 30px;
@@ -68,9 +67,6 @@
             @include flex-center;
             gap: 10px;
 
-            @media screen and (min-width: getBreakPoint('desktop')){
-
-            }
 
             &__item {
                 display: flex;
