@@ -1,6 +1,5 @@
 
 .header {
-    background-color: getColor('header');
     padding-top: 24px;
     padding-bottom: 25px;
 
@@ -10,8 +9,8 @@
         @include flex-center;
 
         .header-nav {
-            margin-right: 318px;
-            @include flex-center;
+
+
             
 
             .logo {
@@ -29,8 +28,13 @@
 
 
             .header-list {
-                @include flex-center;
+                // @include flex-center;
+                display: none;
+                @include tab(768px){
+                    display: flex;
+                }
 
+                
                 &__item:not(:last-child) {
                     margin-right: 50px;
                 }
@@ -79,7 +83,13 @@
         }
 
         .contacts-list {
-          @include flex-center;
+            display: none;
+        //   @include flex-center;
+        @include tab(768px){
+            display: flex;
+            flex-direction: column;
+        }
+
 
             &__item:nth-child(1) {
                 margin-right: 30px;
