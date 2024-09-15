@@ -4,13 +4,23 @@
     padding-top: 60px;
 
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@include desc(1200px){
+    @include flex(space-between,_,_,_,row);
+    
+}
     }
 
+
     .div-footer {
-        // @include FlCol;
+        @include tab(768px){
+            //  @include FlCol;
+            //  margin-top:60px ;
+            //  margin-right:200px ;
+
+        }
+        @include desc(1200px){
+            // @include FlCol;
+        }
         margin-bottom: 60px;
         text-align: center
     }
@@ -34,15 +44,15 @@
     }
 
     .footer-address {
-        @include FlCol;
+        // @include FlCol;
     }
 
     .footer-address-list {
-        @include FlCol;
+        // @include FlCol;
 
 
         &__item {
-            @include FlCol;
+            // @include FlCol;
         }
 
         &__item:not(:last-child) {
@@ -77,6 +87,12 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        @include tab(768px){
+            margin-top: 60px;
+        }
+        @include desc(1200px){
+
+        }
 
 
         .follow-title {
@@ -90,18 +106,18 @@
         }
 
         .follow-list {
-            @include flex;
+            @include flex(_,_,_,_,row);
             gap: 10px;
 
 
             &__item {
                 border-radius: 50%;
-                @include flex;
+                // @include flex;
             }
 
      
             &__link {
-                @include flex-center;
+                @include flex(center,center,_,_,_);
                 width: 44px;
                 height: 44px;
                 border-radius: 50%;
@@ -122,8 +138,9 @@
     }
 
     .newsletter {
-
-
+    @include desc(1200px){
+        @include flex(center,_,12px,_,_);
+    }
    
         
 
@@ -148,11 +165,15 @@
                 
                 color: #fff;
                 margin: 0 auto;
-                display: block;
+                // display: block;
                 margin-top: 20px;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include desc(1200px){
+                    margin-top: 0;
+                }
             }
 
             &__title {
@@ -171,9 +192,22 @@
     }
 }
 
-
+.two-box{
+    @include tab(768px){
+        display: flex;
+         flex-direction: row;
+        
+   }
+   @include desc(1200px){
+    gap: 70px;
+   }
+   
+}
 .newsletter-box{
     margin-top: 60px;
+    @include tab(768px){
+       display: block;
+   }
 }
 .footer-title {
     text-align: center;
@@ -188,164 +222,3 @@
 .telegram-icon{
     fill: currentColor;
 }
-
-
-// .footer-flex {
-//     display: flex;
-// }
-
-// .footer {
-//     background-color: var(--main-color);
-//     padding-bottom: 60px;
-//     padding-top: 60px;
-// }
-
-// .footer-address .footer-address-ul .footer-address-ul-li-1 .footer-address-ul-li {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .footer-address-ul-li-1 {
-//     color: var(--white-color);
-//     font-weight: 400;
-//     line-height: 1.71;
-//     font-style: normal;
-//     margin-bottom: 9px;
-// }
-
-// .footer-address-ul-li-a {
-//     color: rgba(255, 255, 255, 0.6);
-//     ;
-//     text-decoration: none;
-//     font-weight: 400;
-//     line-height: 1.71;
-//     font-style: normal;
-// }
-
-// .footer-address-ul-li-a:hover {
-//     color: var(--button-color)
-// }
-
-// .logo-footer-span {
-//     color: var(--white-color);
-// }
-
-// .logo-footer {
-//     font-family: "Raleway", sans-serif;
-//     font-weight: 700;
-//     font-size: 26px;
-//     letter-spacing: 0.03em;
-//     color: var(--button-color);
-//     margin-bottom: 20px;
-//     display: inline-block;
-// }
-
-// .footer-address-ul-li:not(:last-child) {
-//     margin-bottom: 9px;
-// }
-
-// .div-footer {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .follow {
-//     display: flex;
-//     margin-left: 70px;
-//     flex-direction: column;
-// }
-
-// .follow-title {
-//     font-family: var(--font-family);
-//     font-weight: 700;
-//     font-size: 14px;
-//     letter-spacing: 0.03em;
-//     color: #fff;
-//     margin-bottom: 20px;
-//     margin-top: 12px;
-// }
-
-// .follow-list {
-//     display: flex;
-//     /* justify-content: center; */
-//     gap: 10px;
-// }
-
-// .follow-item {
-//     /* text-align: center;
-//     align-items: center;
-//     justify-content: center; */
-//     border-radius: 50%;
-//     display: flex;
-// }
-
-// .follow-link {
-//     display: flex;
-//     width: 44px;
-//     height: 44px;
-//     align-items: center;
-//     justify-content: center;
-//     border-radius: 50%;
-//     fill: #FFFFFF;
-//     background-color: rgba(255, 255, 255, 0.1);
-//     /* анімація */
-//     transition-property: background-color;
-//     transition-duration: 250ms;
-//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//     transition-delay: 0;
-
-// }
-
-// .follow-link:hover {
-//     fill: #ffffff;
-//     background-color: var(--button-color);
-// }
-// .newsletter-box {
-//     display: flex;
-//     align-items: center;
-//     flex-direction: row;
-
-// }
-
-// .newsletter-email {
-//     width: 358px;
-//     margin: 0 12px 0 0;
-//     padding: 0 16px;
-//     height: 50px;
-//     color: var(--white-color);
-//     background: rgba(0, 0, 0, 0);
-//     border: 1px solid rgba(255, 255, 255, .3);
-//     border-radius: 4px;
-//     outline: none;
-//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-
-// }
-
-// .newsletter-btn {
-//     display: inline-flex;
-//     justify-content: center;
-//     align-items: center;
-//     fill: var(--white-color);
-// }
-
-
-// .newsletter-title {
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 1.9;
-//     letter-spacing: .06em;
-//     margin-right: 10px;
-
-// }
-// .newsletter {
-//     margin-left: 93px;
-// }
-// .footer-title {
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: .03em;
-//     color: var(--white-color);
-//     margin-bottom: 20px;
-//     margin-top: 12px;
-// }

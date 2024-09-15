@@ -19,7 +19,7 @@
         gap: 30px;
     }
     @media screen and (min-width: getBreakPoint('desktop')){
-        @include flex;
+        // @include flex;
     }
 
     &__item {
@@ -79,6 +79,7 @@
 
 }
 }
+
 
 
 // .our-pluses {
