@@ -21,12 +21,13 @@
         flex-wrap: wrap;
         gap: 30px;
         @media screen and (min-width: getBreakPoint('desktop')){
-            // @include flex;
+            @include flex(_,_,_,_,_);
         }
 
 
         &__item {
-            // @include Flwr-centre;
+            @include flex(center,center,_,_,column);
+            
         }
 
         &__link {
@@ -40,7 +41,8 @@
             
             width: 210px;
             height: 92px;
-            // @include flex-center;
+            @include flex(center,center,_,_,_);
+
             border: 1px solid #AFB1B8;
             border-radius: 4px;
             fill: #AFB1B8;

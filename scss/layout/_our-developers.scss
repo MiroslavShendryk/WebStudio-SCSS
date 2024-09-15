@@ -21,7 +21,8 @@
             gap: 30px;
         }
         @media screen and (min-width: getBreakPoint('desktop')){
-            // @include flex;
+            @include flex(_,_,_,_,_);
+            
         }
 
         &__item {
@@ -64,12 +65,14 @@
         }
 
         .our-developers-svg-list {
-            // @include flex-center;
+            @include flex(center,center,_,_,_);
+            
             gap: 10px;
 
 
             &__item {
-                display: flex;
+            @include flex(_,_,_,_,_);
+                
             }
             
                          

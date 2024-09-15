@@ -3,13 +3,15 @@
     padding-bottom: 94px;
 
     .container {
-@include FlCol-centre;
+        @include flex(center,center,_,_,column);
+        
     }
 
     .button-list {
         margin-bottom: 34px;
         padding-bottom: 26px;
-        @include flex;
+        @include flex(_,_,_,_,_);
+        
         gap: 8px;
 
 
@@ -37,7 +39,8 @@
     }
 
     .portfolio-list {
-        @include FlWr;
+        @include flex(_,_,_,wrap,_);
+
         gap: 30px;
 
 
@@ -69,7 +72,8 @@
             transform: translatey(100%);
             transition: 250ms ease-in-out;
             background: rgba(33, 150, 243, 0.9);
-            @include flex-center;
+            @include flex(center,center,_,_,_);
+
             padding-right: 24px;
             padding-left: 24px;
             font-size: 18px;

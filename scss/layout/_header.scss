@@ -32,10 +32,12 @@
 
 
             .header-list {
-                // @include flex-center;
+            @include flex(center,center,_,_,_);
+                
                 display: none;
                 @include tab(768px){
-                    display: flex;
+            @include flex(_,_,_,_,_);
+                    
                 }
 
                 
@@ -90,8 +92,8 @@
             display: none;
         //   @include flex-center;
         @include tab(768px){
-            display: flex;
-            flex-direction: column;
+            @include flex(_,_,_,_,column);
+         
         }
 
 

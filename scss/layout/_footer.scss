@@ -13,13 +13,12 @@
 
     .div-footer {
         @include tab(768px){
-            //  @include FlCol;
-            //  margin-top:60px ;
+             margin-top:60px ;
             //  margin-right:200px ;
 
         }
         @include desc(1200px){
-            // @include FlCol;
+            // @include flex(_,_,_,_,column);
         }
         margin-bottom: 60px;
         text-align: center
@@ -44,15 +43,15 @@
     }
 
     .footer-address {
-        // @include FlCol;
+        @include flex(_,_,_,_,column);
     }
 
     .footer-address-list {
-        // @include FlCol;
+        @include flex(_,_,_,_,column);
 
 
         &__item {
-            // @include FlCol;
+            @include flex(_,_,_,_,column);
         }
 
         &__item:not(:last-child) {
@@ -84,11 +83,11 @@
     }
 
     .follow {
-        display: flex;
-        flex-direction: column;
         text-align: center;
+        @include flex(center,center,_,_,column);
         @include tab(768px){
             margin-top: 60px;
+            @include flex(_,_,_,_,column);
         }
         @include desc(1200px){
 
@@ -148,7 +147,7 @@
 
 
             &__input {
-                width: 358px;
+                width: 450px;
                 margin: 0 12px 0 0;
                 padding: 0 16px;
                 height: 50px;
@@ -194,8 +193,8 @@
 
 .two-box{
     @include tab(768px){
-        display: flex;
-         flex-direction: row;
+        @include flex(space-between,_,_,_,_);
+        
         
    }
    @include desc(1200px){
