@@ -3,15 +3,19 @@
     padding-top: 24px;
     padding-bottom: 25px;
 
+    .header-container{
+        justify-content: space-between
+    }
+
     .container {
-        // display: flex;
-        // align-items: center;
-        @include flex-center;
+        display: flex;
+        align-items: center;
+        
+        // @include flex-center;
 
         .header-nav {
 
-
-            
+           
 
             .logo {
                 font-family: getFont('second-family');
