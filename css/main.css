@@ -90,15 +90,36 @@ body {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 .header .header-container {
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .header .header-container {
+    display: flex;
+    justify-content: _;
+    align-items: _;
+    gap: _;
+    flex-wrap: _;
+    flex-direction: _;
+  }
+}
 .header .container {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header .container .svg-button {
+    display: none;
+  }
 }
 .header .container .header-nav .logo {
   font-family: "Raleway";
@@ -107,6 +128,7 @@ body {
   letter-spacing: 0.03em;
   color: #2196F3;
   margin-right: 93px;
+  display: block;
 }
 .header .container .header-nav .logo__style--header-style {
   color: #000000;
@@ -701,7 +723,7 @@ body {
   align-items: _;
   gap: _;
   flex-wrap: _;
-  flex-direction: row;
+  flex-direction: _;
   gap: 10px;
 }
 .footer .follow .follow-list__item {

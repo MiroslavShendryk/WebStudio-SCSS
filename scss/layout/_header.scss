@@ -1,21 +1,37 @@
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include tab(768px){
+        padding-top: 26px;
+        padding-bottom:26px;
+    }
 
     .header-container{
-        justify-content: space-between
+        justify-content: space-between;
+        @include tab(768px){
+            @include flex(_,_,_,_,_);   
+        }
+        
     }
 
     .container {
         display: flex;
         align-items: center;
+    
         
         // @include flex-center;
 
-        .header-nav {
+        .svg-button{
+            @include tab(768px){
+                display: none;
+            }
+        }
 
-           
+
+
+        .header-nav {
+            
 
             .logo {
                 font-family: getFont('second-family');
@@ -24,6 +40,7 @@
                 letter-spacing: 0.03em;
                 color: getColor('button');
                 margin-right: 93px;
+                display: block;
 
                 &__style--header-style {
                     color: getColor('dark');
