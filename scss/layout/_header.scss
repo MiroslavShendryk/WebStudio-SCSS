@@ -19,34 +19,29 @@
         display: flex;
         align-items: center;
     
-        
-        // @include flex-center;
 
-        .svg-button{
-            @include tab(768px){
-                display: none;
+        .logo {
+            font-family: getFont('second-family');
+            font-weight: 700;
+            font-size: 26px;
+            letter-spacing: 0.03em;
+            color: getColor('button');
+            margin-right: 87px;
+            display: block;
+@include desc(1200px){
+    margin-right: 92px;
+}
+            &__style--header-style {
+                color: getColor('dark');
             }
         }
 
 
-
         .header-nav {
-            
-
-            .logo {
-                font-family: getFont('second-family');
-                font-weight: 700;
-                font-size: 26px;
-                letter-spacing: 0.03em;
-                color: getColor('button');
-                margin-right: 93px;
-                display: block;
-
-                &__style--header-style {
-                    color: getColor('dark');
-                }
+            @include desc(1200px){
+                margin-right: 318px;
+            @include flex(center,center,_,_,_);
             }
-
 
             .header-list {
             @include flex(center,center,_,_,_);
@@ -71,6 +66,7 @@
                     font-weight: 500;
                     text-decoration: none;
                     letter-spacing: 0.02em;
+                    
                     /* анімація */
                     transition-property: color;
                     transition-duration: 250ms;
@@ -86,7 +82,7 @@
                     position: absolute;
                     content: "";
                     margin-top: 28px;
-                    left: 0;
+                    left: 0;    
                     width: 100%;
                     height: 3px;
                     background-color: getColor('button');
@@ -110,7 +106,11 @@
         //   @include flex-center;
         @include tab(768px){
             @include flex(_,_,_,_,column);
-         
+            margin-right: 0;
+            margin-left: auto;
+        }
+        @include desc(1200px){
+            @include flex(center,center,_,_,column)
         }
 
 
@@ -148,5 +148,10 @@
                 margin-top: 2px;
             }
         }
+    }
+}
+.svg-button{
+    @include tab(768px){
+        display: none;
     }
 }
