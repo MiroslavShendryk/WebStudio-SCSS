@@ -1,22 +1,23 @@
 .portfolio {
-    padding-top: 75px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .container {
-        @include flex(center,center,_,_,column);
+         @include flex(center,center,_,_,column);
         
     }
 
     .button-list {
-        margin-bottom: 34px;
-        padding-bottom: 26px;
+        // margin-bottom: 34px;
+        padding-bottom: 40px;
         @include flex(_,_,_,_,_);
-        
+        width:326px ;
+        height:91px ;
         gap: 8px;
 
 
         &__button {
-            padding: 6px 25px;
+            padding: 6px 22px;
             font-weight: 500;
             font-size: 16px;
             line-height: 162%;
@@ -45,7 +46,7 @@
 
 
         &__item {
-            @include FlCol;
+            @include flex(_,_,_,_,column);
             flex-basis: calc((100% - 60px) / 3);
             border: 1px solid red;
 
