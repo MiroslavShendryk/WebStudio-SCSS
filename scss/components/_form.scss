@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vh;
     height: 100%;
     padding: 94px 15px 0;
     opacity: 1;
@@ -40,6 +40,9 @@
     transition:
         transform, opacity,
         250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        @include mob(480px){
+            width: 450px;
+        }
 
 
     &__btn {
@@ -63,7 +66,7 @@
 
 
 .form {
-    @include FlCol-centre;
+    @include flex(center,center,_,_,column);
     color: getColor('link');
 }
 
@@ -80,7 +83,7 @@
     position: relative;
     width: 100%;
     text-align: start;
-    @include FlCol;
+    @include flex(_,_,_,_,column);
 
 
     &__label {
@@ -109,7 +112,7 @@
         position: absolute;
         top: 50%;
         left: 12px;
-       @include InFl-center;
+       @include flex(center,center,_,_,_);
         transform: translateY(-25%);
     }
 
@@ -122,7 +125,7 @@
     }
 
     &__label--polity {
-        @include flex-center;
+        @include flex(center,center,_,_,_);
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.03em;

@@ -224,7 +224,7 @@ body {
     align-items: center;
     gap: _;
     flex-wrap: _;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .header .container .contacts-list__item:nth-child(1) {
@@ -243,7 +243,12 @@ body {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
+  display: flex;
+  justify-content: _;
+  align-items: center;
   gap: 10px;
+  flex-wrap: _;
+  flex-direction: _;
   fill: #757575;
   transition-property: color, fill;
   transition-duration: 250ms;
@@ -657,11 +662,6 @@ body {
   margin-bottom: 60px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .footer .div-footer {
-    margin-top: 60px;
-  }
-}
 .footer .logo-footer {
   font-family: "Raleway";
   font-weight: 700;
@@ -729,7 +729,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer .follow {
-    margin-top: 60px;
     display: flex;
     justify-content: _;
     align-items: _;
@@ -780,6 +779,9 @@ body {
   fill: #FFFFFF;
   background-color: var(--button-color);
 }
+.footer .newsletter {
+  margin: 0 auto;
+}
 @media screen and (min-width: 1200px) {
   .footer .newsletter {
     display: flex;
@@ -791,6 +793,8 @@ body {
   }
 }
 .footer .newsletter .newsletter-box__input {
+  margin: 0 auto;
+  display: block;
   width: 450px;
   margin: 0 12px 0 0;
   padding: 0 16px;
@@ -827,7 +831,7 @@ body {
   .two-box {
     display: flex;
     justify-content: space-between;
-    align-items: _;
+    align-items: baseline;
     gap: _;
     flex-wrap: _;
     flex-direction: _;
@@ -842,9 +846,9 @@ body {
 .newsletter-box {
   margin-top: 60px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .newsletter-box {
-    display: block;
+    margin: 0;
   }
 }
 
@@ -861,4 +865,168 @@ body {
 
 .telegram-icon {
   fill: currentColor;
+}
+
+.newsletter-box__input {
+  display: block;
+  width: 450px;
+  margin: 0 12px 0 0;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 50px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.newsletter {
+  margin: 0 auto;
+}
+
+.backdrop {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  padding: 94px 15px 0;
+  opacity: 1;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, 50%) scale(0.5);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  max-width: 528px;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  transform: translate(-50%, -50%);
+  transition: transform, opacity, 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: column;
+  color: #212121;
+}
+
+.form-title {
+  margin: 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.form-div {
+  position: relative;
+  width: 100%;
+  text-align: start;
+  display: flex;
+  justify-content: _;
+  align-items: _;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: column;
+}
+.form-div__label {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--grey-color);
+}
+.form-div__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+.form-div__input--required {
+  height: 40px;
+  margin: 0 0 10px 0;
+  padding: 0 42px;
+}
+.form-div__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: _;
+  transform: translateY(-25%);
+}
+.form-div__input-comment {
+  height: 120px;
+  margin: 0 0 20px 0;
+  padding: 12px 16px;
+  font-size: 14px;
+  resize: none;
+}
+.form-div__label--polity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: _;
+  flex-wrap: _;
+  flex-direction: _;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin: 0 0 30px 0;
+  color: #757575;
+}
+.form-div__link {
+  color: #2196F3;
+}
+.form-div__send {
+  align-self: center;
+}
+.form-div__send:hover, .form-div__send:focus {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */
