@@ -3,19 +3,31 @@
     padding-bottom: 60px;
 
     .container {
-         @include flex(center,center,_,_,column);
+        //  @include flex(center,center,_,_,column);
         
     }
 
     .button-list {
         // margin-bottom: 34px;
-        padding-bottom: 40px;
-        @include flex(_,_,_,_,_);
-        width:326px ;
-        height:91px ;
+        // padding-bottom: 40px;
+        // @include flex(_,_,_,_,_);
+        // width:326px ;
         gap: 8px;
+    display: flex;
+    flex-wrap: wrap ;
+    width: 326px;
+    margin-right:139px ;
+    @include tab(768px){
+        width: 0px;
+        margin-right: 0px;
+        justify-content: center;
+    }
+    
 
-
+     &__item {
+        display: flex ;
+        margin-bottom: 15px;
+     }
         &__button {
             padding: 6px 22px;
             font-weight: 500;
@@ -24,6 +36,7 @@
             letter-spacing: 0.03em;
             text-align: center;
             color: getColor('link');
+            background-color: getColor('title');
             border: none;
             border-radius: 4px;
         }

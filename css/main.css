@@ -1035,25 +1035,23 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.portfolio .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: _;
-  flex-wrap: _;
-  flex-direction: column;
-}
 .portfolio .button-list {
-  padding-bottom: 40px;
-  display: flex;
-  justify-content: _;
-  align-items: _;
-  gap: _;
-  flex-wrap: _;
-  flex-direction: _;
-  width: 326px;
-  height: 91px;
   gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 326px;
+  margin-right: 139px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio .button-list {
+    width: 0px;
+    margin-right: 0px;
+    justify-content: center;
+  }
+}
+.portfolio .button-list__item {
+  display: flex;
+  margin-bottom: 15px;
 }
 .portfolio .button-list__button {
   padding: 6px 22px;
@@ -1063,6 +1061,7 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
+  background-color: #F5F4FA;
   border: none;
   border-radius: 4px;
 }
