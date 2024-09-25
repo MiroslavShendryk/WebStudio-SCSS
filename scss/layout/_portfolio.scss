@@ -1,6 +1,5 @@
 .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
 
     .container {
         //  @include flex(center,center,_,_,column);
@@ -8,20 +7,16 @@
     }
 
     .button-list {
-        // margin-bottom: 34px;
-        // padding-bottom: 40px;
-        // @include flex(_,_,_,_,_);
-        // width:326px ;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 15px;
         gap: 8px;
-    display: flex;
-    flex-wrap: wrap ;
-    width: 326px;
-    margin-right:139px ;
-    @include tab(768px){
-        width: 0px;
-        margin-right: 0px;
-        justify-content: center;
-    }
+        @include tab(768px){
+            justify-content: center;
+        }
+
     
 
      &__item {
@@ -53,21 +48,31 @@
     }
 
     .portfolio-list {
-        @include flex(_,_,_,wrap,_);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 30px;
+        @include tab(768px){
+            justify-content: start;
+            align-items: stretch;
+            gap: 30px;
+        }
 
-        gap: 30px;
-
-
+    
         &__item {
-            @include flex(_,_,_,_,column);
-            flex-basis: calc((100% - 60px) / 3);
-            border: 1px solid red;
+         width: 450px;
 
             &:hover {
                 box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
             }
+            @include tab(768px){
+                width: calc((100% - 60px) / 2);
+            }
+            @include desc(1200px){
+                width: calc((100% - 60px) / 3);
+            }
         }
-
+       
         &__div {
             overflow: hidden;
             position: relative;
@@ -96,7 +101,16 @@
             color: getColor('light');
         }
 
-
+        &__img{
+            width: 450px;
+            @include tab(768px){
+                width: 354px;
+                height: 294px;
+            }
+            @include desc(1200px){
+                width: 370px;
+            }
+        }
         &__box {
             padding: 20px 24px;
             border-right: 1px solid getColor('border');
