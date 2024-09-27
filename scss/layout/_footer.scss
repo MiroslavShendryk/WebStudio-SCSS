@@ -83,18 +83,12 @@
 
     .follow {
         text-align: center;
-        @include flex(center,center,_,_,column);
-        @include tab(768px){
-            @include flex(_,_,_,_,column);
-        }
-        @include desc(1200px){
-
-        }
 
 
         .follow-title {
             font-family: getColor('font-family');
             font-weight: 700;
+            text-align: left;
             font-size: 14px;
             letter-spacing: 0.03em;
             color: getColor('light');
@@ -149,7 +143,7 @@
                 margin: 0 auto;
                 display: block;
                 width: 450px;
-                margin: 0 12px 0 0;
+                // margin: 0 12px 0 0;
                 padding: 0 16px;
                 height: 50px;
                 color: getColor('light');

@@ -720,25 +720,10 @@ body {
 }
 .footer .follow {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: _;
-  flex-wrap: _;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .footer .follow {
-    display: flex;
-    justify-content: _;
-    align-items: _;
-    gap: _;
-    flex-wrap: _;
-    flex-direction: column;
-  }
 }
 .footer .follow .follow-title {
   font-weight: 700;
+  text-align: left;
   font-size: 14px;
   letter-spacing: 0.03em;
   color: #FFFFFF;
@@ -796,7 +781,6 @@ body {
   margin: 0 auto;
   display: block;
   width: 450px;
-  margin: 0 12px 0 0;
   padding: 0 16px;
   height: 50px;
   color: #FFFFFF;
@@ -891,16 +875,18 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
-  height: 100%;
-  padding: 94px 15px 0;
+  width: 100vw;
+  height: 100vw;
   opacity: 1;
-  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden .modal {
   opacity: 0;
   transform: translate(-50%, 50%) scale(0.5);
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
 }
 
 .is-hidden {
@@ -919,11 +905,6 @@ body {
   background-color: #FFFFFF;
   transform: translate(-50%, -50%);
   transition: transform, opacity, 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 450px;
-  }
 }
 .modal__btn {
   position: absolute;
