@@ -29,7 +29,15 @@
     font-size: 40px;
     letter-spacing: 0.02em;
     color: getColor('link');
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
+.mob-menu-nav-list-link:hover{
+    color: getColor('button');
+}
+
 .mob-contact-list{
     margin-bottom: 64px;
     display: flex;
@@ -42,6 +50,14 @@
     font-size: 24px;
     letter-spacing: 0.02em;
     color: getColor('text');
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+}
+.mob-contact-list-link:hover{
+    color: getColor('button');
 }
 .mob-contact-list-link:first-child{
     font-size: 34px;
@@ -61,6 +77,7 @@ line-height: 122%;
 letter-spacing: 0.02em;
 color: #2196f3;
 }
+
 .mob-social-list-item:not(:last-child){
 border-right:1px solid rgba(33, 33, 33, 0.2) ;
 
