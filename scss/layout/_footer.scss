@@ -88,7 +88,7 @@
         .follow-title {
             font-family: getColor('font-family');
             font-weight: 700;
-            text-align: left;
+            text-align: center;
             font-size: 14px;
             letter-spacing: 0.03em;
             color: getColor('light');
@@ -97,7 +97,7 @@
         }
 
         .follow-list {
-            @include flex(_,_,_,_,_);
+             @include flex(center,_,_,_,_);
             gap: 10px;
 
 
